@@ -1,2 +1,14 @@
 * {
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
+
+#dash_container {
+  column-count: 2;
+  column-width: 50%;
+  column-gap: 30px; }
+
+.penge {
+  background-color: red; }
+
+.mad {
+  background-color: red; }
