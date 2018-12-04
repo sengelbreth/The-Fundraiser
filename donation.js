@@ -8,7 +8,6 @@ const e = {
 };
 
 
-
 function clickedDonation(){
     document.querySelector("#donerknap").addEventListener("click", donerClicked);
 
@@ -27,3 +26,4 @@ function donerClicked(){
 .then(res => res.json())
 .then(d => {});
 }
+
