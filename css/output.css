@@ -5,12 +5,18 @@
 #dash_container {
   column-count: 2;
   column-width: 50%;
-  column-gap: 30px; }
+  column-gap: 30px;
+  text-align: center;
+  margin: 10px; }
 
 .penge {
-  background-color: red;
-  height: 500px; }
+  height: 500px;
+  background-color: #fef5f5;
+  box-shadow: 5px 5px 3px silver;
+  margin: 20px; }
 
 .mad {
-  background-color: red;
-  height: 500px; }
+  height: 500px;
+  background-color: #fef5f5;
+  box-shadow: 5px 5px 3px silver;
+  margin: 20px; }
