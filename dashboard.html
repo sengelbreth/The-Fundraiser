@@ -5,14 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dashboard</title>
+    <link rel="stylesheet" href="css/output.css">
   </head>
   <body>
+
+      <template id="pengeliste">
+
+              
+              <tr>
+                <td data-name>NAVN</td>
+                <td data-amount>BELØB</td>
+              </tr>
+
+           
+
+      </template>
+    
     <section id="dash_container">
+      <h1>Penge</h1>
       <div class="penge">
+          <table>
+            <thead>
+              <th>Navn</th>
+              <th>Beløb</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-name>NAVN</td>
+                <td data-amount>BELØB</td>
+              </tr>
+            </tbody>
+
+            </table>
+         
           
       </div>
+      <h1>Mad</h1>
 
       <div class="mad">
+          <template id="madliste">
+            
+          </template>
 
       </div>
 
