@@ -12,9 +12,33 @@
   </h1>
   <form name="login">
   Username<input type="text" name="userid"/>
+<<<<<<< HEAD
   <input type="button" id="submit" value="Login"/>
   <input type="reset" value="Cancel"/>
   </form>
+=======
+  <input type="button" onclick="check(this.form)" value="Login"/>
+  <input type="reset" value="Cancel"/>
+  </form>
+  <script language="javascript">
+  function check(form)/*function to check userid & password*/
+  {
+   /*the following code checkes whether the entered userid and password are matching*/
+   if(form.userid.value == "Ib" )
+    {
+      window.open('dashboard.html')/*opens the target page while Id & password matches*/
+    }
+    else if (form.userid.value == "Sophie" )
+    {
+      window.open('index.html')/*opens the target page while Id & password matches*/
+    }
+    else
+   {
+     alert("Error Username is not correct")/*displays error message*/
+    }
+  }
+  </script>
+>>>>>>> 78813b6c0aea67fedf482cb29eb4acff3c156c61
 
     <a href="dashboard.html">DASHBOARD</a>
     <button id="donerknap">Donér her</button>

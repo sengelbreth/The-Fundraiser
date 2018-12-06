@@ -17,9 +17,7 @@ function init(){
 
 function getUsername(){
     console.log("kom nu")
- 
     console.log(form);
-    
     username = form.userid.value;
     console.log(username);
     
@@ -45,10 +43,6 @@ function fetchUsers() {
 function createUserInfo(userData) {
     const clone = document.querySelector("#userinfo").content.cloneNode(true);
 
-
-
-   
-  
     clone.querySelector("[data-username]").textContent = userData.name;
     clone.querySelector("[data-id]").dataset.userid = userData.id;
   
