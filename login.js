@@ -2,9 +2,9 @@ window.addEventListener("load", init);
 
 const endpoint3 = "https://5c0654d5c16e1200139479ba.mockapi.io/users";
 
-let username = "";
+let username;
 let form;
-let user = "";
+let user;
 
 //sessionStorage.setItem("user", username);
 
