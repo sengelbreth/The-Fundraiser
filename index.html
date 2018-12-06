@@ -9,6 +9,30 @@
   </head>
   <body>
     <header><button>Login</button></header>
+  </h1>
+  <form name="login">
+  Username<input type="text" name="userid"/>
+  <input type="button" onclick="check(this.form)" value="Login"/>
+  <input type="reset" value="Cancel"/>
+  </form>
+  <script language="javascript">
+  function check(form)/*function to check userid & password*/
+  {
+   /*the following code checkes whether the entered userid and password are matching*/
+   if(form.userid.value == "Ib" )
+    {
+      window.open('dashboard.html')/*opens the target page while Id & password matches*/
+    }
+    else if (form.userid.value == "Sophie" )
+    {
+      window.open('index.html')/*opens the target page while Id & password matches*/
+    }
+    else
+   {
+     alert("Error Username is not correct")/*displays error message*/
+    }
+  }
+  </script>
 
     <a href="dashboard.html">DASHBOARD</a>
     <button id="donerknap">Donér her</button>
@@ -17,6 +41,7 @@
     <template id="userinfo">
       <li data-id="userid"><span data-username="name">NAME</span></li>
     </template>
+
     <script src="main.js"></script>
     <script src="donation.js"></script>
   </body>
