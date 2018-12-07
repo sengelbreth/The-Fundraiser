@@ -40,8 +40,11 @@ function UserInfo(Data) {
 
 function check() {
   const found = users.find(user=>{
-    if (username === user) {
+    if (username === "Ib") {
       window.open("dashboard.html");
+      return user;
+    }
+    if (username === user) {
       return user;
     }
     
