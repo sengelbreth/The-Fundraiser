@@ -1,53 +1,36 @@
 window.addEventListener("load", initList);
 
-const a = {
-  name: "Magnus"
-};
 
-const b = {
-  name: "Sophie"
-};
-
-const c = {
-  name: "Ib"
-};
 
 const endpoint = "https://5c0654d5c16e1200139479ba.mockapi.io/users";
+let new_user;
+const form2 = document.querySelector("#user_form");
 
-/* fetch(endpoint, {
-  method: "post",
-  body: JSON.stringify(a),
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json"
-  }
-});
 
-fetch(endpoint, {
-  method: "post",
-  body: JSON.stringify(b),
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json"
-  }
-});
-fetch(endpoint, {
-  method: "post",
-  body: JSON.stringify(c),
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json"
-  }
-})
-  .then(res => res.json())
-  .then(d => {});
-  */
 
 function initList() {
-  console.log("Init list");
 
   listUsers();
+  document.querySelector("#create_user").addEventListener("click", opretBruger);
+  
 } 
+
+function opretBruger(){
+
+const a = {
+  name: form2.new_user.value,
+  email: form2.email.value,
+  phonenumber: form2.phonenumber.value,
+};
+  fetch(endpoint, {
+    method: "post",
+    body: JSON.stringify(a),
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    }
+  });
+}
 
 function listUsers() {
   fetch(endpoint, {
@@ -71,3 +54,5 @@ function createUserInfo(userData) {
 
   document.querySelector("#userlist").appendChild(clone);
 }
+
+

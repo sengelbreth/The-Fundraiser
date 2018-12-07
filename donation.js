@@ -2,7 +2,9 @@ window.addEventListener("load", clickedDonation);
 
 const endpoint1 = "https://5c0654d5c16e1200139479ba.mockapi.io/donationer";
 
+
 let amountOnSlider;
+
 
 
 
@@ -20,7 +22,9 @@ function showNumber() {
 
 function clickedDonation() {
   document.querySelector("#donerknap").addEventListener("click", donerClicked);
+
 }
+
 
 function donerClicked() {
   const e = {

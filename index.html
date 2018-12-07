@@ -11,7 +11,7 @@
     <header><button>Login</button></header>
   </h1>
   <form name="login">
-  Username<input type="text" name="userid"/>
+  <input type="text" name="userid" placeholder="username"/>
   <input type="button" id="submit" value="Login"/>
   <input type="reset" value="Cancel"/>
   </form>
@@ -27,6 +27,15 @@
 
     <a href="dashboard.html">DASHBOARD</a>
     <button id="donerknap">Donér her</button>
+    <form id="user_form">
+
+      <input type="text" name="new_user" placeholder="Name">
+
+      <input type="text" name="email" placeholder="email">
+
+      <input type="text" name="phonenumber" placeholder="phonenumber">
+      <input type="button" id="create_user">
+    </form>
     <ul id="userlist"></ul>
 
     <template id="userinfo">
