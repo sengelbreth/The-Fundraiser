@@ -13,7 +13,7 @@ const c = {
 };
 
 const endpoint = "https://5c0654d5c16e1200139479ba.mockapi.io/users";
-
+/*
 fetch(endpoint, {
   method: "post",
   body: JSON.stringify(a),
@@ -41,7 +41,7 @@ fetch(endpoint, {
 })
   .then(res => res.json())
   .then(d => {});
-
+*/
 function initList() {
   console.log("Init list");
 

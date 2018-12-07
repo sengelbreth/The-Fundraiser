@@ -4,7 +4,7 @@ const endpoint3 = "https://5c0654d5c16e1200139479ba.mockapi.io/users";
 
 let username;
 let form;
-let user;
+let users=[];
 
 //sessionStorage.setItem("user", username);
 
@@ -34,14 +34,20 @@ function fetchUsers() {
 }
 
 function UserInfo(Data) {
-  user = Data.name;
-  console.log(user);
+  users.push(Data.name);
+  //console.log(user);
 }
 
 function check() {
-  if (username === user) {
-    window.open("dashboard.html");
-  } else {
-    alert("Error Username is not correct");
+  const found = users.find(user=>{
+    if (username === user) {
+      window.open("dashboard.html");
+      return user;
+    }
+    
+  })
+  console.log(found)
+  if(!found){
+    alert("ikke findety")
   }
 }
