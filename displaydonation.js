@@ -2,8 +2,6 @@ window.addEventListener("load", getDonationer);
 
 const endpoint1 = "https://5c0654d5c16e1200139479ba.mockapi.io/donationer";
 
-const clone = document.querySelector("#pengeliste").content.cloneNode(true);
-
 function getDonationer() {
   fetch(endpoint1, {
     method: "get",
@@ -19,6 +17,8 @@ function getDonationer() {
 }
 
 function visDonationer(donationer) {
-  clone.querySelector("[data-amount]").textContent = donationer.Amount;
+  const clone = document.querySelector("#pengeliste").content.cloneNode(true);
+  clone.querySelector("[data-name]").textContent = donationer.userID;
+  clone.querySelector("[data-amount]").textContent = donationer.amount;
   document.querySelector("#penge").appendChild(clone);
 }
