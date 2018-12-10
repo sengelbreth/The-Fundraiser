@@ -8,13 +8,24 @@
     <link rel="stylesheet" href="css/output.css" />
   </head>
   <body>
-    <header><button>Login</button></header>
-  </h1>
-  <form name="login">
-  <input type="text" name="userid" placeholder="username"/>
-  <input type="button" id="submit" value="Login"/>
-  <input type="reset" value="Cancel"/>
-  </form>
+    <header><button id="myBtn">Login</button></header>
+
+
+  <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form name="login">
+            <input type="text" name="userid" placeholder="username"/>
+            <input type="button" id="submit" value="Login"/>
+            <input type="reset" value="Cancel"/>
+        </form>
+       
+        
+      </div>
+    
+    </div>
 
 
 
@@ -34,7 +45,7 @@
       <input type="text" name="email" placeholder="email">
 
       <input type="text" name="phonenumber" placeholder="phonenumber">
-      <input type="button" id="create_user">
+      <input type="button" id="create_user" value="Sign up">
     </form>
     <ul id="userlist"></ul>
 
