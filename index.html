@@ -8,60 +8,57 @@
     <link rel="stylesheet" href="css/output.css" />
   </head>
   <body>
-    <header><button id="myBtn">Login</button><button id="signBtn">Sign up</button></header>
+    <header>
+      <button id="myBtn">Login</button><button id="logout">log out</button
+      ><button id="signBtn">Sign up</button>
+    </header>
 
-
-  <div id="myModal" class="modal">
-
+    <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
         <form name="login">
-            <input type="text" name="userid" placeholder="username"/>
-            <input type="button" id="submit" value="Login"/>
-            <input type="reset" value="Cancel" id="cancelBtn"/>
+          <input type="text" name="userid" placeholder="username" />
+          <input type="button" id="submit" value="Login" />
+          <input type="reset" value="Cancel" id="cancelBtn" />
         </form>
-    
       </div>
-    
     </div>
     <div id="signModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close1">&times;</span>
+        <form id="user_form">
+          <input type="text" name="new_user" placeholder="Name" />
 
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close1">&times;</span>
-          <form id="user_form">
-
-              <input type="text" name="new_user" placeholder="Name">
-        
-              <input type="text" name="email" placeholder="email">
-              <input type="text" name="phonenumber" placeholder="phonenumber">
-              <input type="button" id="create_user" value="Sign up">
-            </form>
-         
-      
-        </div>
-      
+          <input type="text" name="email" placeholder="email" />
+          <input type="text" name="phonenumber" placeholder="phonenumber" />
+          <input type="button" id="create_user" value="Sign up" />
+        </form>
       </div>
+    </div>
 
-
-
-  <h2>
-  Donér <span class="value"></span>
-  </h2>
-  <form id="donation">
-    <input type="range" min="0" max="2000" step="50" value="0" id="pengeslider">
-  </form>
-  <form id="madDonation">
-      <input type="checkbox" value="And">And<br>
-      <input type="checkbox" value="Rødkål">Rødkål<br>
-      <input type="checkbox" value="Flæskesteg">Flæskesteg<br>
-      <input type="checkbox" value="Kartofler">Kartofler
-  </form>
+    <h2>Donér <span class="value"></span></h2>
+    <form id="donation">
+      <input
+        type="range"
+        min="0"
+        max="2000"
+        step="50"
+        value="0"
+        id="pengeslider"
+      />
+    </form>
+    <form id="madDonation">
+      <input type="checkbox" value="And" />And<br />
+      <input type="checkbox" value="Rødkål" />Rødkål<br />
+      <input type="checkbox" value="Flæskesteg" />Flæskesteg<br />
+      <input type="checkbox" value="Kartofler" />Kartofler
+    </form>
 
     <a href="dashboard.html">DASHBOARD</a>
     <button id="donerknap">Donér her</button>
-   
+
     <ul id="userlist"></ul>
 
     <template id="userinfo">

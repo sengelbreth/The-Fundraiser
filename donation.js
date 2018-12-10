@@ -1,30 +1,22 @@
-window.addEventListener("load", clickedDonation);
+window.addEventListener("load", init);
 
 const endpoint1 = "https://5c0654d5c16e1200139479ba.mockapi.io/donationer";
 
-
 let amountOnSlider;
 
-
-
-
+function init() {
+  document.querySelector("#pengeslider").addEventListener("input", showNumber);
+  document.querySelector("#donerknap").addEventListener("click", donerClicked);
+  console.log(users);
+}
 /************************************Slider**********************************************/
-
-document.querySelector("#pengeslider").addEventListener("input", showNumber);
 
 function showNumber() {
   console.log(this.value);
   amountOnSlider = document.querySelector(".value").textContent = this.value;
-  
 }
 
 /************************************Slider slut**********************************************/
-
-function clickedDonation() {
-  document.querySelector("#donerknap").addEventListener("click", donerClicked);
-
-}
-
 
 function donerClicked() {
   const e = {
@@ -44,7 +36,3 @@ function donerClicked() {
     .then(res => res.json())
     .then(d => {});
 }
-
-
-
-
