@@ -6,16 +6,20 @@ let username;
 let form;
 let users=[];
 
-//sessionStorage.setItem("user", username);
+
 
 function init() {
   fetchUsers();
+
+// tjek userid fra session - og log ind
+
   document.querySelector("#submit").addEventListener("click", getUsername);
   form = document.querySelector("form");
 }
 
 function getUsername() {
   username = form.userid.value;
+  sessionStorage.setItem("user", username);
   check();
 }
 
