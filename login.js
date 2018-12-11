@@ -7,7 +7,10 @@ let id;
 let form;
 let users = [];
 let usersMId = [];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 736e94cc8cfa24496cdd37fde0bd870fa1cb18a4
 
 function init() {
   fetchUsers();
