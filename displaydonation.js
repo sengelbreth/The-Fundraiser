@@ -47,7 +47,7 @@ function visMad(donationer, users){
     });
     const clone1 = document.querySelector("#madliste").content.cloneNode(true);
     clone1.querySelector("[data-name-mad]").textContent = user.name + " ";
-    clone1.querySelector("[data-amount-mad]").textContent = donation.what + " ";
+    clone1.querySelector("[data-amount-mad]").textContent = donation.what;
 
     document.querySelector(".mad").appendChild(clone1);
   
