@@ -6,11 +6,9 @@ let username;
 let id = endpoint3.id;
 let form;
 let users = [];
-let usersMId = [];
 
 function init() {
   fetchUsers();
-  fetchId();
 
   // tjek userid fra session - og log ind
 
@@ -21,8 +19,7 @@ function init() {
 
 function getUsername() {
   username = form.userid.value;
-  //sessionStorage.setItem("user", username);
-  //sessionStorage.setItem("userId", id)
+
   check(username);
 }
 
@@ -47,61 +44,23 @@ function fetchUsers() {
 
 function UserInfo(Data) {
   users.push(Data);
-  //console.log(users);
 }
 
 function check(name) {
   const found = users.find(user => {
-    if(user.name===name){
+    if (user.name === name) {
       return user;
     }
-  })
+  });
 
   if (!found) {
     alert("ikke findety");
   } else {
-    if(found.name==="Ib"){
+    if (found.name === "Ib") {
       window.open("dashboard.html");
-      
     } else {
       sessionStorage.setItem("user", found.name);
-      sessionStorage.setItem("userId", found.id)
+      sessionStorage.setItem("userId", found.id);
     }
   }
-  /*const found = users.find(user => {
-    if (username === "Ib") {
-      window.open("dashboard.html");
-      return user;
-    }
-    if (username === user) {
-      return user;
-    }
-  });
-  // console.log(found);
-  if (!found) {
-    alert("ikke findety");
-  }*/
-}
-
-function fetchId() {
-  fetch(endpoint3, {
-    method: "get",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    }
-  })
-    .then(res => res.json())
-    .then(data => {
-      usersMId = data;
-      idUser(usersMId);
-    });
-}
-function idUser(usersMId) {
-  if (username == usersMId.name) {
-    id = usersMId.id;
-  }
-
-  console.log(id);
-  console.log(usersMId.name);
 }

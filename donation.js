@@ -5,7 +5,7 @@ const endpoint1 = "https://5c0654d5c16e1200139479ba.mockapi.io/donationer";
 let amountOnSlider;
 let checkBox;
 let what = [];
-
+let data = sessionStorage.getItem("userId");
 
 function init() {
   document.querySelector("#pengeslider").addEventListener("input", showNumber);
@@ -21,25 +21,21 @@ function init() {
 function showNumber() {
   console.log(this.value);
   amountOnSlider = document.querySelector(".value").textContent = this.value;
- 
-
 }
-function madDonation(){
+function madDonation() {
   console.log(what);
   checkBox = document.querySelector(".and").textContent = this.value;
   what.push(checkBox);
-
 }
 
 /************************************Slider slut**********************************************/
 
 function donerClicked() {
   const e = {
-    userID: 1,
+    userID: data,
     what: what,
     amount: document.querySelector("#pengeslider").value,
     createdAt: Date.now()
-  
   };
 
   console.log(e);
