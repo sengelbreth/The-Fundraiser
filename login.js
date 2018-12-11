@@ -3,14 +3,10 @@ window.addEventListener("load", init);
 const endpoint3 = "https://5c0654d5c16e1200139479ba.mockapi.io/users";
 
 let username;
-let id;
+let id = endpoint3.id;
 let form;
 let users = [];
 let usersMId = [];
-<<<<<<< HEAD
-
-=======
->>>>>>> 736e94cc8cfa24496cdd37fde0bd870fa1cb18a4
 
 function init() {
   fetchUsers();
@@ -25,12 +21,14 @@ function init() {
 
 function getUsername() {
   username = form.userid.value;
-  sessionStorage.setItem("user", username);
-  check();
+  //sessionStorage.setItem("user", username);
+  //sessionStorage.setItem("userId", id)
+  check(username);
 }
 
 function signOut() {
   sessionStorage.removeItem("user");
+  sessionStorage.removeItem("userId");
 }
 
 function fetchUsers() {
@@ -48,12 +46,29 @@ function fetchUsers() {
 }
 
 function UserInfo(Data) {
-  users.push(Data.name);
+  users.push(Data);
   //console.log(users);
 }
 
-function check() {
+function check(name) {
   const found = users.find(user => {
+    if(user.name===name){
+      return user;
+    }
+  })
+
+  if (!found) {
+    alert("ikke findety");
+  } else {
+    if(found.name==="Ib"){
+      window.open("dashboard.html");
+      
+    } else {
+      sessionStorage.setItem("user", found.name);
+      sessionStorage.setItem("userId", found.id)
+    }
+  }
+  /*const found = users.find(user => {
     if (username === "Ib") {
       window.open("dashboard.html");
       return user;
@@ -65,7 +80,7 @@ function check() {
   // console.log(found);
   if (!found) {
     alert("ikke findety");
-  }
+  }*/
 }
 
 function fetchId() {
