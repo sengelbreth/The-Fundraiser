@@ -7,7 +7,7 @@ let amountOnSlider;
 function init() {
   document.querySelector("#pengeslider").addEventListener("input", showNumber);
   document.querySelector("#donerknap").addEventListener("click", donerClicked);
-  console.log(users);
+  // console.log(users);
 }
 /************************************Slider**********************************************/
 

@@ -3,12 +3,15 @@ window.addEventListener("load", init);
 const endpoint3 = "https://5c0654d5c16e1200139479ba.mockapi.io/users";
 
 let username;
+let id;
 let form;
 let users = [];
+let usersMId = [];
 
 
 function init() {
   fetchUsers();
+  fetchId();
 
   // tjek userid fra session - og log ind
 
@@ -43,6 +46,7 @@ function fetchUsers() {
 
 function UserInfo(Data) {
   users.push(Data.name);
+  //console.log(users);
 }
 
 function check() {
@@ -55,8 +59,31 @@ function check() {
       return user;
     }
   });
-  console.log(found);
+  // console.log(found);
   if (!found) {
     alert("ikke findety");
   }
+}
+
+function fetchId() {
+  fetch(endpoint3, {
+    method: "get",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    }
+  })
+    .then(res => res.json())
+    .then(data => {
+      usersMId = data;
+      idUser(usersMId);
+    });
+}
+function idUser(usersMId) {
+  if (username == usersMId.name) {
+    id = usersMId.id;
+  }
+
+  console.log(id);
+  console.log(usersMId.name);
 }
