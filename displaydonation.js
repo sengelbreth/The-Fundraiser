@@ -22,6 +22,7 @@ function getDonationer() {
     });
 }
 
+
 function visDonationer(donationer, users) {
   console.log("3");
   donationer.forEach(donation => {
@@ -29,12 +30,28 @@ function visDonationer(donationer, users) {
       return user.id == donation.userID;
     });
     const clone = document.querySelector("#pengeliste").content.cloneNode(true);
-    clone.querySelector("[data-name]").textContent = user.name;
+    clone.querySelector("[data-name]").textContent = user.name + " ";
     clone.querySelector("[data-amount]").textContent = donation.amount;
     document.querySelector("#penge").appendChild(clone);
+   
   });
 
   console.log(users);
+}
+
+function visMad(donationer, users){
+  console.log("4");
+  donationer.forEach(donation => {
+    const user = users.find(function(user){
+      return user.id == donation.userID;
+    });
+    const clone1 = document.querySelector("#madliste").content.cloneNode(true);
+    clone1.querySelector("[data-name-mad]").textContent = user.name + " ";
+    clone1.querySelector("[data-amount-mad]").textContent = donation.what + " ";
+
+    document.querySelector(".mad").appendChild(clone1);
+  
+  })
 }
 
 function fetchId() {
@@ -50,5 +67,6 @@ function fetchId() {
       users = data;
       console.log("2");
       visDonationer(donationer, users);
+      visMad(donationer, users);
     });
 }
