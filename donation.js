@@ -5,7 +5,6 @@ const endpoint1 = "https://5c0654d5c16e1200139479ba.mockapi.io/donationer";
 let amountOnSlider;
 let checkBox;
 let what = [];
-let data = sessionStorage.getItem("userId");
 
 function init() {
   document.querySelector("#pengeslider").addEventListener("input", showNumber);
@@ -32,7 +31,7 @@ function madDonation() {
 
 function donerClicked() {
   const e = {
-    userID: data,
+    userID: sessionStorage.getItem("userId"),
     what: what,
     amount: document.querySelector("#pengeslider").value,
     createdAt: Date.now()
