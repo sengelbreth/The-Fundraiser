@@ -9,18 +9,25 @@
   </head>
   <body>
     <header>
-      <button id="myBtn">Login</button><button id="logout">log out</button
-      ><button id="signBtn">Sign up</button>
-    </header>
-
+    <div class="header">
+      <img src="img/Logo_RGB.gif" class="rodekors">
+      <div class="header_btn">
+      <button id="myBtn">Login</button><button id="signBtn">Sign up</button><button id="logout">log out</button
+      >
+    </div>
+    </div>
+   
+    
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
         <form name="login">
-          <input type="text" name="userid" placeholder="username" />
-          <input type="button" id="submit" value="Login" />
+          <input type="text" name="userid" placeholder="Username" />
+          <div class="wrapper">
+          <input type="button" id="submit" value="Login" /><br>
           <input type="reset" value="Cancel" id="cancelBtn" />
+        </div>
         </form>
       </div>
     </div>
@@ -31,15 +38,40 @@
         <form id="user_form">
           <input type="text" name="new_user" placeholder="Name" />
 
-          <input type="text" name="email" placeholder="email" />
-          <input type="text" name="phonenumber" placeholder="phonenumber" />
+          <input type="text" name="email" placeholder="Email" />
+          <input type="text" name="phonenumber" placeholder="Phonenumber" />
+          <div class="wrapper">
           <input type="button" id="create_user" value="Sign up" />
+        </div>
         </form>
       </div>
     </div>
+  </header>
+      
+      
+<!-- <div class="welcome_pic"></div>  -->
+   <img src="img/welcomepic.jpg" class="billede"> 
 
-    <h2>Donér <span class="value"></span></h2>
+
+
+  
+ <!--  <div class="billede">
+  <img src="img/welcome.jpg">
+</div> -->
+
+<section>
+   
+
+  <div class="container">
+  <div class="doner_container">
+    <h2>Donér </h2>
+    <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+    
+    <p>Hvor meget vil du donere?</p>
+    <div class="penge_container">
+     
     <form id="donation">
+        
       <input
         type="range"
         min="0"
@@ -47,7 +79,12 @@
         step="50"
         value="0"
         id="pengeslider"
+        
       />
+      <span class="value">0</span>kr
+    </div>
+    <p>og/eller hvor meget mad</p>
+  <div class="penge_container">
     </form>
     <form id="madDonation">
       <input type="checkbox" value="And" class="and"/>And<br />
@@ -55,15 +92,53 @@
       <input type="checkbox" value="Flæskesteg" class="fleaskesteg"/>Flæskesteg<br />
       <input type="checkbox" value="Kartofler" class="kartofler"/>Kartofler
     </form>
+  </div>
 
-    <a href="dashboard.html">DASHBOARD</a>
+    <div class="doner_knap_wrapper">
     <button id="donerknap">Donér her</button>
+  </div>
+  </div>
 
-    <ul id="userlist"></ul>
+  <section id="info">
+    <div class="doner_container">
+      <h2>Info</h2>
+      <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+      <img src="img/welcomepic.jpg">
+      <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+      <img src="img/welcomepic.jpg">
+    </div>
+
+</div>
+
+ <!--  <a href="dashboard.html">DASHBOARD</a>
+  <ul id="userlist"></ul>
 
     <template id="userinfo">
       <li data-id="userid"><span data-username="name">NAME</span></li>
-    </template>
+    </template> -->
+
+
+    <section id="footer">
+      <div class="footer">
+        <div class="footerimg">
+        <img src="img/bankRØD.png">
+        <p>Du kan donere igennem bank</p>
+      </div>
+      <div class="footerimg">
+        <img src="img/mobilepayRØD.png">
+        <p>Du kan donere igennem mobilepay</p>
+      </div>
+        <div class="footerimg">
+        <img src="img/smsRØD.png">
+        <p>Du kan donere på sms</p>
+      </div>
+        <div class="footerimg">
+        <img src="img/indsamlingRØD.png">
+        <p>Eller du kan blive indsamler!</p>
+      
+      </div>
+      </div>
+    </section>
 
     <script src="main.js"></script>
     <script src="donation.js"></script>

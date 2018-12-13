@@ -2,25 +2,76 @@
   margin: 0;
   padding: 0; }
 
+body, html {
+  height: 100%; }
+  body h1, body h2, html h1, html h2 {
+    text-align: center; }
+  body p, html p {
+    margin: 10px 0px 38px 8px; }
+
+/***************************************************Header*********************************************/
+.header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: transparent;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1; }
+  .header .header_btn {
+    grid-column: 6; }
+  .header .rodekors {
+    width: 50%;
+    margin: 5px; }
+  .header button {
+    margin-top: 8px;
+    margin-left: 4px;
+    margin-right: 11px;
+    padding: 7px;
+    border: 1px solid #c31214;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #c31214;
+    /* box-shadow: 3px 3px 3px rgb(192, 192, 192);  */
+    width: 60px; }
+    .header button:hover {
+      transform: scale(1.3);
+      color: #fef5f5;
+      background-color: #c31214; }
+
+/***************************************************welcome*********************************************/
+/* .welcome_pic{
+  background-image: url("img/welcomepic.jpg");
+  height: 50%; 
+  background-attachment: fixed; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}  */
+.billede {
+  width: 100%;
+  height: 50%;
+  object-fit: cover; }
+
+/***************************************************Dashboard*********************************************/
 #dash_container {
   column-count: 2;
   column-width: 50%;
   column-gap: 30px;
   text-align: center;
   margin: 10px; }
+  #dash_container #penge {
+    height: 500px;
+    background-color: #fef5f5;
+    box-shadow: 5px 5px 3px silver;
+    margin: 20px; }
+  #dash_container .mad {
+    height: 500px;
+    background-color: #fef5f5;
+    box-shadow: 5px 5px 3px silver;
+    margin: 20px; }
 
-#penge {
-  height: 500px;
-  background-color: #fef5f5;
-  box-shadow: 5px 5px 3px silver;
-  margin: 20px; }
-
-.mad {
-  height: 500px;
-  background-color: #fef5f5;
-  box-shadow: 5px 5px 3px silver;
-  margin: 20px; }
-
+/***************************************************modal*********************************************/
 .modal {
   display: none;
   /* Hidden by default */
@@ -45,11 +96,47 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #fef5f5;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; }
+  width: 30%; }
+
+input[type=text] {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+  /* Allow the user to vertically resize the textarea (not horizontally) */
+  text-align: center; }
+
+input[type=button], input[type=reset], input[type=button] {
+  border-radius: 5px;
+  background-color: #fef5f5;
+  color: #c31214;
+  box-shadow: 3px 3px 3px silver;
+  width: 170px;
+  height: 30px;
+  margin: 10px; }
+
+input[type=button]:hover, input[type=reset]:hover, input[type=button]:hover {
+  transform: scale(1.1);
+  color: #fef5f5;
+  background-color: #c31214; }
+
+.wrapper {
+  text-align: center; }
 
 /* The Close Button */
 .close {
@@ -57,21 +144,67 @@
   float: right;
   font-size: 28px;
   font-weight: bold; }
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer; }
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; }
 
 .close1 {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold; }
+  .close1:hover, .close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; }
 
-.close1:hover,
-.close1:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer; }
+/***************************************************Doner*********************************************/
+.container {
+  display: grid;
+  position: relative;
+  top: -30px;
+  grid-template-columns: repeat(2, 1fr); }
+  .container .doner_container {
+    background-color: #fef5f5;
+    width: 75%;
+    height: 1100px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 10px 10px 13px silver; }
+    .container .doner_container img {
+      width: 100%; }
+    .container .doner_container input[type=checkbox] {
+      margin: 10px; }
+    .container .doner_container input[type=range] {
+      width: 50%; }
+    .container .doner_container .penge_container {
+      margin: 40px; }
+    .container .doner_container .doner_knap_wrapper {
+      text-align: center; }
+      .container .doner_container .doner_knap_wrapper #donerknap {
+        margin-top: 8px;
+        margin-left: 4px;
+        margin-right: 11px;
+        padding: 7px;
+        border-radius: 5px;
+        background-color: #c31214;
+        color: #fef5f5;
+        box-shadow: 3px 3px 3px silver;
+        width: 200px;
+        height: 40px; }
+        .container .doner_container .doner_knap_wrapper #donerknap:hover {
+          transform: scale(1.1); }
+
+/***************************************************footer*********************************************/
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 300px;
+  color: silver;
+  background-color: #fef5f5; }
+  .footer .footerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; }
