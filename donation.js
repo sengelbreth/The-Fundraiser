@@ -48,4 +48,6 @@ function donerClicked() {
   })
     .then(res => res.json())
     .then(d => {});
+
+  alert("du har donéret");
 }
