@@ -42,8 +42,8 @@ body, html {
 
 /***************************************************welcome*********************************************/
 .welcome_pic {
-  background-image: url("julehjælpen.jpg");
-  height: 90%;
+  background-image: url("julehjælpen-01.svg");
+  height: 80%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
