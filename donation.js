@@ -30,24 +30,28 @@ function madDonation() {
 /************************************Slider slut**********************************************/
 
 function donerClicked() {
-  const e = {
-    userID: sessionStorage.getItem("userId"),
-    what: what,
-    amount: document.querySelector("#pengeslider").value,
-    createdAt: Date.now()
-  };
+  if (sessionStorage.getItem("userId") === null) {
+    alert("du skal være logget ind for at kunne donér");
+  } else {
+    const e = {
+      userID: sessionStorage.getItem("userId"),
+      what: what,
+      amount: document.querySelector("#pengeslider").value,
+      createdAt: Date.now()
+    };
 
-  console.log(e);
-  fetch(endpoint1, {
-    method: "post",
-    body: JSON.stringify(e),
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    }
-  })
-    .then(res => res.json())
-    .then(d => {});
+    console.log(e);
+    fetch(endpoint1, {
+      method: "post",
+      body: JSON.stringify(e),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(d => {});
 
-  alert("du har donéret");
+    alert("du har donéret");
+  }
 }

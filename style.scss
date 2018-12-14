@@ -5,26 +5,24 @@ $thirdcolor: white;
 * {
   margin: 0;
   padding: 0;
-  
 }
 
-body,html {
+body,
+html {
   height: 100%;
-  
 
-  h1,h2{
+  h1,
+  h2 {
     text-align: center;
   }
 
-    p {
-      margin: 10px 0px 38px 8px;
+  p {
+    margin: 10px 0px 38px 8px;
   }
 }
 
-
-
 /***************************************************Header*********************************************/
-.header{
+.header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   background-color: transparent;
@@ -33,16 +31,15 @@ body,html {
   position: fixed;
   z-index: 1;
 
-    .header_btn{
-      grid-column: 6;
-  
-    } 
-      .rodekors{
-        width: 50%;
-        margin: 5px;
-      }
+  .header_btn {
+    grid-column: 6;
+  }
+  .rodekors {
+    width: 50%;
+    margin: 5px;
+  }
 
-  button{
+  button {
     margin-top: 8px;
     margin-left: 4px;
     margin-right: 11px;
@@ -53,37 +50,30 @@ body,html {
     color: $secondcolor;
     /* box-shadow: 3px 3px 3px rgb(192, 192, 192);  */
     width: 60px;
-      &:hover{
-        transform: scale(1.3);
-        color: $maincolor;
-        background-color: $secondcolor;
+    &:hover {
+      transform: scale(1.3);
+      color: $maincolor;
+      background-color: $secondcolor;
     }
-    
-  } 
-
+  }
 }
 
 /***************************************************welcome*********************************************/
 
-
-
-.welcome_pic{
+.welcome_pic {
   background-image: url("julehjælpen-01.svg");
-  height: 80%; 
-  background-attachment: fixed; 
+  height: 80%;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
-}  
+  background-size: cover;
+}
 
 /* .billede {
   width: 100%;
   height: 50%;
   object-fit: cover;
 } */
-
-
-
 
 /***************************************************Dashboard*********************************************/
 
@@ -107,13 +97,7 @@ body,html {
     box-shadow: 5px 5px 3px rgb(192, 192, 192);
     margin: 20px;
   }
-
 }
-
-
-
-
-
 
 /***************************************************modal*********************************************/
 
@@ -140,44 +124,46 @@ body,html {
   width: 30%;
 }
 
-input[type=text], {
-    width: 100%;
-    /* Full width */
-    padding: 12px;
-    /* Some padding */
-    border: 1px solid #ccc;
-    /* Gray border */
-    border-radius: 4px;
-    /* Rounded borders */
-    box-sizing: border-box;
-    /* Make sure that padding and width stays in place */
-    margin-top: 6px;
-    /* Add a top margin */
-    margin-bottom: 16px;
-    /* Bottom margin */
-    resize: vertical;/* Allow the user to vertically resize the textarea (not horizontally) */  
-    text-align: center;
-    
+input[type="text"] {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  text-align: center;
 }
 
-input[type=button], input[type=reset], input[type=button]{
+input[type="button"],
+input[type="reset"],
+input[type="button"] {
   border-radius: 5px;
   background-color: $maincolor;
   color: $secondcolor;
-  box-shadow: 3px 3px 3px rgb(192, 192, 192); 
+  box-shadow: 3px 3px 3px rgb(192, 192, 192);
   width: 170px;
   height: 30px;
   margin: 10px;
-  
 }
 
-input[type=button]:hover, input[type=reset]:hover, input[type=button]:hover{
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
   transform: scale(1.1);
   color: $maincolor;
   background-color: $secondcolor;
 }
 
-.wrapper{
+.wrapper {
   text-align: center;
 }
 
@@ -188,12 +174,12 @@ input[type=button]:hover, input[type=reset]:hover, input[type=button]:hover{
   font-size: 28px;
   font-weight: bold;
 
-  &:hover, &:focus{
+  &:hover,
+  &:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-}
-
+  }
 }
 
 .close1 {
@@ -202,88 +188,86 @@ input[type=button]:hover, input[type=reset]:hover, input[type=button]:hover{
   font-size: 28px;
   font-weight: bold;
 
-    &:hover, &:focus{
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  
+  &:hover,
+  &:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
-
 /***************************************************Doner*********************************************/
-.container{
+.container {
   background-color: transparent;
   display: grid;
   position: relative;
   top: -30px;
   grid-template-columns: repeat(2, 1fr);
 
-  .doner_container{
+  .doner_container {
     background-color: $maincolor;
     width: 75%;
     height: 1100px;
-    margin: auto ;
+    margin: auto;
     padding: 20px;
     border: 1px solid silver;
     box-shadow: 10px 10px 13px rgb(192, 192, 192);
-    
+
     img {
       width: 100%;
     }
-    input[type=checkbox]{
+    input[type="checkbox"] {
       margin: 10px;
     }
-    input[type=range]{
+    input[type="range"] {
       width: 50%;
     }
 
-.penge_container{
-  margin:  40px;
-}
+    .penge_container {
+      margin: 40px;
+    }
 
-.doner_knap_wrapper{
-  text-align: center;
+    .doner_knap_wrapper {
+      text-align: center;
 
-  #donerknap{
-    margin-top: 8px;
-    margin-left: 4px;
-    margin-right: 11px;
-    padding: 7px;
-    border-radius: 5px;
-    background-color: $secondcolor;
-    color: $maincolor;
-    box-shadow: 3px 3px 3px rgb(192, 192, 192); 
-    width: 200px;
-    height: 40px;
-    &:hover{
-      transform: scale(1.1);
+      #donerknap {
+        margin-top: 8px;
+        margin-left: 4px;
+        margin-right: 11px;
+        padding: 7px;
+        border-radius: 5px;
+        background-color: $secondcolor;
+        color: $maincolor;
+        box-shadow: 3px 3px 3px rgb(192, 192, 192);
+        width: 200px;
+        height: 40px;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
- 
 }
-  }
-}
-
-
-
-
 
 /***************************************************footer*********************************************/
 
-.footer{
+.footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   height: 300px;
   color: silver;
   background-color: $maincolor;
 
-  .footerimg{
+  .footerimg {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
   }
-  
 }
 
+/***************************************************vis knaper*********************************************/
+
+.hide {
+  display: none;
+}
