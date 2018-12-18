@@ -3,8 +3,10 @@
   margin: 0;
   padding: 0; }
 
-body, html {
+body,
+html {
   height: 100%; }
+<<<<<<< HEAD
   body h1, body h2, html h1, html h2 {
     text-align: center;
     font-family: 'Roboto', sans-serif; }
@@ -13,6 +15,16 @@ body, html {
     font-family: 'Roboto Slab', sans-serif; }
   body th, html th {
     font-family: 'Roboto', sans-serif; }
+=======
+  body h1,
+  body h2,
+  html h1,
+  html h2 {
+    text-align: center; }
+  body p,
+  html p {
+    margin: 10px 0px 38px 8px; }
+>>>>>>> f616a376469a1ce3aeda3fdc75b607771c531ffa
 
 /***************************************************Header*********************************************/
 .header {
@@ -119,7 +131,7 @@ body, html {
   border: 1px solid #888;
   width: 30%; }
 
-input[type=text] {
+input[type="text"] {
   width: 100%;
   /* Full width */
   padding: 12px;
@@ -138,7 +150,9 @@ input[type=text] {
   /* Allow the user to vertically resize the textarea (not horizontally) */
   text-align: center; }
 
-input[type=button], input[type=reset], input[type=button] {
+input[type="button"],
+input[type="reset"],
+input[type="button"] {
   border-radius: 5px;
   background-color: #fef5f5;
   color: #c31214;
@@ -147,7 +161,9 @@ input[type=button], input[type=reset], input[type=button] {
   height: 30px;
   margin: 10px; }
 
-input[type=button]:hover, input[type=reset]:hover, input[type=button]:hover {
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
   transform: scale(1.1);
   color: #fef5f5;
   background-color: #c31214; }
@@ -193,9 +209,9 @@ input[type=button]:hover, input[type=reset]:hover, input[type=button]:hover {
     box-shadow: 10px 10px 13px silver; }
     .container .doner_container img {
       width: 100%; }
-    .container .doner_container input[type=checkbox] {
+    .container .doner_container input[type="checkbox"] {
       margin: 10px; }
-    .container .doner_container input[type=range] {
+    .container .doner_container input[type="range"] {
       width: 50%; }
     .container .doner_container .penge_container {
       margin: 40px; }
@@ -227,3 +243,7 @@ input[type=button]:hover, input[type=reset]:hover, input[type=button]:hover {
     margin-left: auto;
     margin-right: auto;
     width: 70%; }
+
+/***************************************************vis knaper*********************************************/
+.hide {
+  display: none; }

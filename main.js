@@ -7,7 +7,7 @@ const modal = document.querySelector("#myModal");
 const modal1 = document.querySelector("#signModal");
 
 function initList() {
-  listUsers();
+  // listUsers();
   document.querySelector("#create_user").addEventListener("click", opretBruger);
   document
     .querySelector("#myModal")
@@ -42,7 +42,7 @@ function opretBruger() {
     }
   });
 }
-
+/*
 function listUsers() {
   fetch(endpoint, {
     method: "get",
@@ -64,7 +64,7 @@ function createUserInfo(userData) {
   clone.querySelector("[data-id]").dataset.userid = userData.id;
 
   document.querySelector("#userlist").appendChild(clone);
-}
+} */
 
 // https://www.w3schools.com/howto/howto_css_modals.asp?fbclid=IwAR3Lm87wEaPWQ3QQ0WNPI91R4xUh738SDQFBbC135DojytAdDpPdAtR_bw8
 

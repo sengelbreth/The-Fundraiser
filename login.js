@@ -11,6 +11,11 @@ function init() {
   fetchUsers();
 
   // tjek userid fra session - og log ind
+  if (sessionStorage.getItem("userId") === null) {
+    document.querySelector("#logout").classList.add(`hide`);
+  } else {
+    document.querySelector("#myBtn").classList.add(`hide`);
+  }
 
   document.querySelector("#submit").addEventListener("click", getUsername);
   document.querySelector("#logout").addEventListener("click", signOut);
