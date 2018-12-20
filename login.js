@@ -59,7 +59,7 @@ function check(name) {
   });
 
   if (!found) {
-    alert("ikke findety");
+    alert("Brugernavnet findes ikke");
   } else {
     if (found.name === "Ib") {
       window.open("dashboard.html");
