@@ -6,25 +6,19 @@
 body,
 html {
   height: 100%; }
-<<<<<<< HEAD
-  body h1, body h2, html h1, html h2 {
-    text-align: center;
-    font-family: 'Roboto', sans-serif; }
-  body p, html p {
-    margin: 10px 0px 38px 8px;
-    font-family: 'Roboto Slab', sans-serif; }
-  body th, html th {
-    font-family: 'Roboto', sans-serif; }
-=======
   body h1,
   body h2,
   html h1,
   html h2 {
-    text-align: center; }
+    text-align: center;
+    font-family: 'Roboto', sans-serif; }
   body p,
   html p {
-    margin: 10px 0px 38px 8px; }
->>>>>>> f616a376469a1ce3aeda3fdc75b607771c531ffa
+    margin: 10px 0px 38px 8px;
+    font-family: 'Roboto Slab', sans-serif; }
+  body th,
+  html th {
+    font-family: 'Roboto', sans-serif; }
 
 /***************************************************Header*********************************************/
 .header {
@@ -36,13 +30,13 @@ html {
   position: fixed;
   z-index: 1; }
   .header .header_btn {
-    grid-column: 6; }
+    grid-column: 6;
+    justify-self: end; }
   .header .rodekors {
     width: 50%;
     margin: 5px; }
   .header button {
     margin-top: 8px;
-    margin-left: 4px;
     margin-right: 11px;
     padding: 7px;
     border: 1px solid #c31214;
@@ -55,6 +49,8 @@ html {
       transform: scale(1.3);
       color: #fef5f5;
       background-color: #c31214; }
+  .header .logo {
+    width: 150px; }
 
 /***************************************************welcome*********************************************/
 .welcome_pic {
@@ -196,7 +192,6 @@ input[type="button"]:hover {
 .container {
   background-color: transparent;
   display: grid;
-  position: relative;
   top: -30px;
   grid-template-columns: repeat(2, 1fr); }
   .container .doner_container {
@@ -237,7 +232,8 @@ input[type="button"]:hover {
   grid-template-columns: repeat(4, 1fr);
   height: 300px;
   color: silver;
-  background-color: #fef5f5; }
+  background-color: #fef5f5;
+  margin: 20px; }
   .footer .footerimg {
     display: block;
     margin-left: auto;
