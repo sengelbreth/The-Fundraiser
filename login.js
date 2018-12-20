@@ -9,13 +9,13 @@ let users = [];
 
 function init() {
   fetchUsers();
-
-  // tjek userid fra session - og log ind
   if (sessionStorage.getItem("userId") === null) {
     document.querySelector("#logout").classList.add(`hide`);
   } else {
     document.querySelector("#myBtn").classList.add(`hide`);
+    document.querySelector("#signBtn").classList.add(`hide`);
   }
+  // tjek userid fra session - og log ind
 
   document.querySelector("#submit").addEventListener("click", getUsername);
   document.querySelector("#logout").addEventListener("click", signOut);
@@ -31,6 +31,9 @@ function getUsername() {
 function signOut() {
   sessionStorage.removeItem("user");
   sessionStorage.removeItem("userId");
+  document.querySelector("#myBtn").classList.remove(`hide`);
+  document.querySelector("#signBtn").classList.remove(`hide`);
+  document.querySelector("#logout").classList.add(`hide`);
 }
 
 function fetchUsers() {
@@ -64,6 +67,10 @@ function check(name) {
     if (found.name === "Ib") {
       window.open("dashboard.html");
     } else {
+      document.querySelector("#myBtn").classList.add(`hide`);
+      document.querySelector("#signBtn").classList.add(`hide`);
+      document.querySelector("#logout").classList.remove(`hide`);
+
       sessionStorage.setItem("user", found.name);
       sessionStorage.setItem("userId", found.id);
     }
