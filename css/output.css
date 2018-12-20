@@ -11,14 +11,14 @@ html {
   html h1,
   html h2 {
     text-align: center;
-    font-family: 'Roboto', sans-serif; }
+    font-family: "Roboto", sans-serif; }
   body p,
   html p {
     margin: 10px 0px 38px 8px;
-    font-family: 'Roboto Slab', sans-serif; }
+    font-family: "Roboto Slab", sans-serif; }
   body th,
   html th {
-    font-family: 'Roboto', sans-serif; }
+    font-family: "Roboto", sans-serif; }
 
 /***************************************************Header*********************************************/
 .header {
@@ -243,3 +243,11 @@ input[type="button"]:hover {
 /***************************************************vis knaper*********************************************/
 .hide {
   display: none; }
+
+/***************************************************media *********************************************/
+@media (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: column; }
+  .welcome_pic {
+    background-size: 150vw; } }
